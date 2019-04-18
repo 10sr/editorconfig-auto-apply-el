@@ -29,6 +29,7 @@
 
 (require 'editorconfig)
 
+;;;###autoload
 (define-minor-mode editorconfig-auto-apply-mode
   "When saving .editorconfig file update buffer configs."
   :lighter " ECAA"
@@ -38,6 +39,7 @@
     (remove-hook 'after-save-hook
                  'editorconfig-auto-apply-mode--run t)))
 
+;;;###autoload
 (defun editorconfig-auto-apply-enable ()
   "Turn on command `editorconfig-auto-apply-mode'."
   (unless editorconfig-auto-apply-mode
